@@ -27,9 +27,11 @@ INSERT INTO `contatos` (`id`, `number`, `created_at`, `updated_at`) VALUES
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `failed_jobs`
---
+CREATE TABLE notifications (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  payload LONGTEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
